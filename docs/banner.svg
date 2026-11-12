@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-label="Book Your Visit">
+  <rect width="1280" height="300" fill="#F7F4EE"/>
+  <g transform="translate(96 102) scale(3)">
+    <rect width="32" height="32" rx="8" fill="#2B4C9B"/>
+    <g fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 15 16 7.5l9.5 7.5"/><path d="M9.5 13v11h13V13"/><path d="m12.5 18.5 2.5 2.5 4.5-4.5"/></g>
+  </g>
+  <text x="232" y="152" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#2B4C9B">Book Your Visit</text>
+  <text x="234" y="200" font-family="Arial, sans-serif" font-size="26" fill="#1B2232">Customers pick a time themselves. Change or cancel without a call.</text>
+  <rect y="298" width="1280" height="2" fill="#2B4C9B"/>
+</svg>

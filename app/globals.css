@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* Tokens follow DESIGN.md. Change DESIGN.md first. Hex copies of the brand
+   colors live in lib/brand.ts for the drawn images. */
+
+@theme {
+  --color-*: initial;
+  --color-paper: #f7f4ee;
+  --color-surface: #ffffff;
+  --color-sunk: #eee9df;
+  --color-line: #dcd5c7;
+  --color-ink: #1b2232;
+  --color-ink-muted: #586073;
+  --color-brand: #2b4c9b;
+  --color-brand-deep: #1f3a7a;
+  --color-brand-soft: #e4eaf6;
+  --color-accent: #b45a0c;
+  --color-accent-soft: #f8e6d2;
+  --color-night: #1b2232;
+  --color-night-raised: #2a3348;
+  --color-on-night: #f7f4ee;
+  --color-on-night-muted: #aeb5c6;
+  --color-danger: #a3271d;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+
+  --font-display: var(--font-young-serif), Georgia, serif;
+  --font-sans: var(--font-onest), system-ui, sans-serif;
+
+  --text-*: initial;
+  --text-display: 2.625rem;
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.015em;
+  --text-headline: 1.75rem;
+  --text-headline--line-height: 1.15;
+  --text-headline--letter-spacing: -0.01em;
+  --text-title: 1.1875rem;
+  --text-title--line-height: 1.3;
+  --text-body: 1rem;
+  --text-body--line-height: 1.55;
+  --text-label: 0.875rem;
+  --text-label--line-height: 1.4;
+  --text-micro: 0.75rem;
+  --text-micro--line-height: 1.35;
+
+  --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --text-display: 3.75rem;
+  }
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* Blocked time: hatched, so it reads as "not open" without a new color. */
+.hatch {
+  background-image: repeating-linear-gradient(135deg, var(--color-sunk) 0 6px, var(--color-surface) 6px 12px);
+}
+
+/* Motion (DESIGN.md, Motion). Content is visible by default; these only
+   run when the visitor's system allows motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .arrive {
+    animation: arrive 280ms var(--ease-soft) both;
+  }
+  .hairline-draw {
+    transform-origin: left;
+    animation: hairline 600ms var(--ease-soft) both;
+  }
+}
+
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes hairline {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
