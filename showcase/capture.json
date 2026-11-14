@@ -1,5 +1,14 @@
 {
   "app": "book-your-visit",
-  "takenAt": "2026-11-12T15:20:25.218Z",
-  "pictures": []
+  "takenAt": "2026-11-14T01:26:30.194Z",
+  "pictures": [
+    "pick-time-feed-light",
+    "booked-feed-light",
+    "owners-day-feed-light",
+    "pick-time-stories-light",
+    "booked-stories-light",
+    "pick-time-phone-card-light",
+    "booked-phone-card-light",
+    "owners-day-phone-card-light"
+  ]
 }
