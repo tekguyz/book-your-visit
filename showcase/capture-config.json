@@ -1,0 +1,358 @@
+{
+  "name": "book-your-visit",
+  "hideBanner": [
+    "Leave the demo"
+  ],
+  "themes": [
+    "light"
+  ],
+  "enter": [
+    {
+      "goto": "https://bookyourvisit.vercel.app"
+    },
+    {
+      "click": "Try the demo"
+    },
+    {
+      "waitUrl": "**/demo"
+    }
+  ],
+  "screens": [
+    {
+      "name": "booking-page",
+      "device": "desktop",
+      "steps": []
+    },
+    {
+      "name": "booked",
+      "device": "desktop",
+      "steps": [
+        {
+          "click": "Standard clean"
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": {
+            "selector": "button[aria-pressed]:has-text(\":\")"
+          }
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": "Book this visit"
+        },
+        {
+          "wait": 1000
+        }
+      ]
+    },
+    {
+      "name": "booking-page",
+      "device": "phone",
+      "steps": []
+    },
+    {
+      "name": "owners-day",
+      "device": "phone",
+      "steps": [
+        {
+          "click": "Standard clean"
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": {
+            "selector": "button[aria-pressed]:has-text(\":\")"
+          }
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": "Book this visit"
+        },
+        {
+          "wait": 1000
+        },
+        {
+          "click": "See it on the owner"
+        },
+        {
+          "wait": 1000
+        }
+      ]
+    },
+    {
+      "name": "pick-time",
+      "device": "feed",
+      "steps": [
+        {
+          "scroll": 0
+        },
+        {
+          "click": "Standard clean"
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": {
+            "selector": "ul[aria-label=\"Day\"] button:not([disabled])"
+          },
+          "nth": 3
+        },
+        {
+          "wait": 600
+        },
+        {
+          "scrollTo": {
+            "selector": "#panel-customer"
+          },
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "booked",
+      "device": "feed",
+      "steps": [
+        {
+          "click": {
+            "selector": "button[aria-pressed]:has-text(\":\")"
+          }
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": "Book this visit"
+        },
+        {
+          "wait": 1000
+        },
+        {
+          "scrollTo": {
+            "selector": "#panel-customer"
+          },
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "owners-day",
+      "device": "feed",
+      "steps": [
+        {
+          "click": "See it on the owner"
+        },
+        {
+          "wait": 1000
+        },
+        {
+          "scrollTo": {
+            "selector": "#panel-owner"
+          },
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "pick-time",
+      "device": "stories",
+      "steps": [
+        {
+          "scroll": 0
+        },
+        {
+          "click": "Standard clean"
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": {
+            "selector": "ul[aria-label=\"Day\"] button:not([disabled])"
+          },
+          "nth": 3
+        },
+        {
+          "wait": 600
+        },
+        {
+          "scrollTo": {
+            "selector": "#panel-customer"
+          },
+          "offset": 120
+        }
+      ]
+    },
+    {
+      "name": "booked",
+      "device": "stories",
+      "steps": [
+        {
+          "click": {
+            "selector": "button[aria-pressed]:has-text(\":\")"
+          }
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": "Book this visit"
+        },
+        {
+          "wait": 1000
+        },
+        {
+          "scrollTo": {
+            "selector": "#panel-customer"
+          },
+          "offset": 120
+        }
+      ]
+    },
+    {
+      "name": "pick-time",
+      "device": "phone-card",
+      "steps": [
+        {
+          "scroll": 0
+        },
+        {
+          "click": "Standard clean"
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": {
+            "selector": "ul[aria-label=\"Day\"] button:not([disabled])"
+          },
+          "nth": 3
+        },
+        {
+          "wait": 600
+        },
+        {
+          "scrollTo": {
+            "selector": "#panel-customer"
+          },
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "booked",
+      "device": "phone-card",
+      "steps": [
+        {
+          "click": {
+            "selector": "button[aria-pressed]:has-text(\":\")"
+          }
+        },
+        {
+          "wait": 600
+        },
+        {
+          "click": "Book this visit"
+        },
+        {
+          "wait": 1000
+        },
+        {
+          "scrollTo": {
+            "selector": "#panel-customer"
+          },
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "owners-day",
+      "device": "phone-card",
+      "steps": [
+        {
+          "click": "See it on the owner"
+        },
+        {
+          "wait": 1000
+        },
+        {
+          "scrollTo": {
+            "selector": "#panel-owner"
+          },
+          "offset": 20
+        }
+      ]
+    }
+  ],
+  "video": {
+    "device": "desktop",
+    "seconds": 4.5,
+    "steps": [
+      {
+        "goto": "https://bookyourvisit.vercel.app/demo"
+      }
+    ]
+  },
+  "hideText": [
+    "Built by TEKGUYZ"
+  ],
+  "hideSelector": [
+    "[data-demo-banner]",
+    "[role=tablist]",
+    "#main > div:first-child",
+    "ol[aria-label=\"Things to try\"]"
+  ],
+  "reel": {
+    "steps": [
+      {
+        "scroll": 0
+      },
+      {
+        "click": "Standard clean"
+      },
+      {
+        "wait": 600
+      },
+      {
+        "click": {
+          "selector": "ul[aria-label=\"Day\"] button:not([disabled])"
+        },
+        "nth": 3
+      },
+      {
+        "wait": 600
+      },
+      {
+        "click": {
+          "selector": "button[aria-pressed]:has-text(\":\")"
+        }
+      },
+      {
+        "wait": 600
+      },
+      {
+        "click": "Book this visit"
+      },
+      {
+        "wait": 1000
+      },
+      {
+        "click": "See it on the owner"
+      },
+      {
+        "wait": 1000
+      },
+      {
+        "scroll": 0
+      }
+    ]
+  },
+  "css": "@media (max-aspect-ratio: 3/5) { #main { padding-top: 120px; } }"
+}
