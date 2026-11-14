@@ -163,7 +163,7 @@ export function DemoApp() {
         </div>
 
         <div className="mt-5 grid gap-8 lg:grid-cols-[26rem_minmax(0,1fr)] lg:items-start">
-          <section id="panel-customer" aria-label="Booking page" className={`${tab === "customer" ? "" : "hidden"} lg:sticky lg:top-4 lg:block`}>
+          <section id="panel-customer" aria-label="Booking page" className={`${tab === "customer" ? "" : "hidden"} min-w-0 lg:sticky lg:top-4 lg:block`}>
             <BookingPage
               key={resets}
               week={week}
@@ -178,7 +178,7 @@ export function DemoApp() {
               }}
             />
           </section>
-          <section id="panel-owner" aria-label="Owner's day" className={`${tab === "owner" ? "" : "hidden"} flex flex-col gap-6 lg:flex`}>
+          <section id="panel-owner" aria-label="Owner's day" className={`${tab === "owner" ? "" : "hidden"} min-w-0 flex flex-col gap-6 lg:flex`}>
             <OwnerDay key={resets} week={week} schedule={s} day={ownerDay} onDay={setOwnerDay} mineId={mineId} onBlock={onBlock} onUnblock={onUnblock} />
             <Outbox outbox={s.outbox} />
           </section>
